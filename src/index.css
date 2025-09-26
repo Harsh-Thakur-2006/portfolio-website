@@ -1,0 +1,18 @@
+/* Test if this file is being loaded at all */
+body {
+  background-color: lightyellow !important;
+}
+
+/* Manual tailwind-like classes for testing */
+.bg-red-500 {
+  background-color: #ef4444 !important;
+}
+.text-white {
+  color: white !important;
+}
+.p-8 {
+  padding: 2rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
