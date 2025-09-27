@@ -56,9 +56,14 @@ const About = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 shadow-lg transform hover:scale-105">
-                📄 Download Resume
-              </button>
+              <a 
+  href="/assets/Harsh_Thakur_Resume.pdf"
+  download="Harsh_Thakur_Resume.pdf"
+  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 inline-flex items-center gap-2"
+>
+  <i className="bi bi-download"></i>
+  Download Resume
+</a>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
