@@ -1,9 +1,10 @@
 import React from 'react';
 import profilePic from '../assets/profilePic.jpg';
 
+
 const About = () => {
   const skills = [
-    'HTML/CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git/GitHub', 'Responsive Design'
+    'HTML/CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git/GitHub', 'Responsive Design', 'React Native'
   ];
 
   return (
@@ -12,44 +13,40 @@ const About = () => {
         <h2 className="text-4xl font-bold text-center mb-12 text-white">About Me</h2>
 
         <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
-          {/* Profile Image Section */}
+          {/* Profile Section */}
           <div className="lg:w-1/3 flex justify-center">
-            <div className="relative">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-purple-500">
-                <img
-                  src={profilePic}
-                  alt="My Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* You can replace the emoji with an actual image later */}
+            <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-purple-500">
+              <img
+                src={profilePic}
+                alt="Harsh Thakur"
+                className="w-full h-full object-cover"
+              />
             </div>
+
           </div>
 
           {/* Content Section */}
           <div className="lg:w-2/3">
-            <h3 className="text-2xl font-semibold mb-4 text-white">Hello! I'm Harsh Thakur</h3>
-            <p className="text-slate-300 mb-6 leading-relaxed">
-              I'm a passionate frontend developer with a love for creating beautiful,
-              user-friendly web applications. I enjoy turning complex problems into
-              simple, intuitive solutions that provide great user experiences.
+            <h3 className="text-3xl font-bold mb-6 text-white">Hello! I'm <span className="text-purple-400">Harsh Thakur</span></h3>
+
+            <p className="text-slate-300 mb-4 text-lg leading-relaxed">
+              A passionate frontend developer dedicated to creating beautiful, user-friendly web applications.
+              I love transforming complex challenges into elegant, intuitive solutions.
             </p>
 
-            <p className="text-slate-300 mb-6 leading-relaxed">
-              Currently, I'm focused on mastering modern web technologies and
-              building projects that solve real-world problems. I believe in
-              continuous learning and staying updated with the latest trends
-              in web development.
+            <p className="text-slate-300 mb-8 text-lg leading-relaxed">
+              Currently mastering modern web technologies with a focus on React ecosystem and responsive design.
+              Committed to continuous learning and staying at the forefront of web development trends.
             </p>
 
             {/* Skills Section */}
             <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-white">Skills & Technologies</h4>
+              <h4 className="text-2xl font-semibold mb-6 text-white">Skills & Technologies</h4>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="bg-slate-700 text-purple-300 px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-600 transition duration-300"
+                    className="bg-slate-700 text-purple-300 px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-600 transition duration-300 cursor-default"
                   >
                     {skill}
                   </span>
@@ -57,16 +54,16 @@ const About = () => {
               </div>
             </div>
 
-            {/* Resume Download Button */}
-            <div className="flex space-x-4">
-              <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
-                Download Resume
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 shadow-lg transform hover:scale-105">
+                📄 Download Resume
               </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
               >
-                Get In Touch
+                💬 Get In Touch
               </button>
             </div>
           </div>
