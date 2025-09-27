@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Home from './sections/Home';
 import About from './sections/About';
@@ -6,7 +6,6 @@ import Projects from './sections/Projects';
 import Achievements from './sections/Achievements';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-
 
 function App() {
   return (
