@@ -6,10 +6,12 @@ import Projects from './sections/Projects';
 import Achievements from './sections/Achievements';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
+import FloatingActionButton from './components/FloatingActionButton';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-900 min-h-screen">
       <Header />
       <Home />
       <About />
@@ -17,6 +19,7 @@ function App() {
       <Achievements />
       <Contact />
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 }
