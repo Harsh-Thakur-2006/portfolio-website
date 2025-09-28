@@ -1,16 +1,55 @@
-# React + Vite
+# Harsh Thakur - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React.js and Tailwind CSS, featuring smooth animations and mobile-first design.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[Visit Live Portfolio](https://profound-palmier-244fcd.netlify.app/#projects)**
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Modern Design** - Dark theme with purple accent colors
+- **Responsive** - Mobile-first approach, works on all devices  
+- **Smooth Animations** - Framer Motion for professional transitions
+- **Active Section Indicator** - Visual feedback for navigation
+- **Typing Animation** - Dynamic text effects on hero section
+- **Floating Action Button** - Quick access to essential actions
+- **Resume Download** - Direct PDF download functionality
+- **Contact Form** - Ready for potential collaborations
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Bootstrap Icons
+- **Deployment:** Netlify
+
+## Sections
+
+- **Home** - Hero section with typing animation
+- **About** - Personal introduction and skills
+- **Projects** - Showcase of completed and ongoing projects
+- **Achievements** - Certifications, hackathons, and accomplishments  
+- **Contact** - Contact form and social links
+
+## Local Development
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation & Running
+```bash
+# Clone the repository
+git clone https://github.com/Harsh-Thakur-2006/portfolio-website.git
+cd portfolio-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
