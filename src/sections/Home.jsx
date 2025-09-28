@@ -13,14 +13,16 @@ const Home = () => {
         <div className="space-x-4">
           <button 
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
+            className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition duration-300 shadow-lg inline-flex items-center gap-2"
           >
+            <i className="bi bi-code-slash"></i>
             View My Work
           </button>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
+            className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300 inline-flex items-center gap-2"
           >
+            <i className="bi bi-envelope"></i>
             Get In Touch
           </button>
         </div>

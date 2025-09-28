@@ -1,8 +1,16 @@
 import React from 'react';
 import profilePic from '../assets/profilePic.jpg';
 
-
 const About = () => {
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Harsh_Thakur_Resume.pdf';
+    link.download = 'Harsh_Thakur_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const skills = [
     'HTML/CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git/GitHub', 'Responsive Design', 'React Native'
   ];
@@ -22,12 +30,13 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-
           </div>
 
           {/* Content Section */}
           <div className="lg:w-2/3">
-            <h3 className="text-3xl font-bold mb-6 text-white">Hello! I'm <span className="text-purple-400">Harsh Thakur</span></h3>
+            <h3 className="text-3xl font-bold mb-6 text-white">
+              Hello! I'm <span className="text-purple-400">Harsh Thakur</span>
+            </h3>
 
             <p className="text-slate-300 mb-4 text-lg leading-relaxed">
               A passionate frontend developer dedicated to creating beautiful, user-friendly web applications.
@@ -56,19 +65,19 @@ const About = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-  href="/assets/Harsh_Thakur_Resume.pdf"
-  download="Harsh_Thakur_Resume.pdf"
-  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 inline-flex items-center gap-2"
->
-  <i className="bi bi-download"></i>
-  Download Resume
-</a>
+              <button
+                onClick={handleResumeDownload}
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 inline-flex items-center justify-center gap-2"
+              >
+                <i className="bi bi-download"></i>
+                Download Resume
+              </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
+                className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300 inline-flex items-center justify-center gap-2"
               >
-                💬 Get In Touch
+                <i className="bi bi-chat-dots"></i>
+                Get In Touch
               </button>
             </div>
           </div>

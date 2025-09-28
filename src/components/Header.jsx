@@ -8,6 +8,16 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Harsh_Thakur_Resume.pdf';
+    link.download = 'Harsh_Thakur_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setIsMenuOpen(false); // Close mobile menu after download
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-slate-800 shadow-lg z-50 border-b border-slate-700">
       <nav className="container mx-auto px-6 py-4">
@@ -21,13 +31,12 @@ const Header = () => {
             <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-blue-400 transition">Projects</button>
             <button onClick={() => scrollToSection('achievements')} className="text-slate-300 hover:text-blue-400 transition">Achievements</button>
             <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-blue-400 transition">Contact</button>
-            <a 
-              href="/assets/Harsh_Thakur_Resume.pdf"
-              download="Harsh_Thakur_Resume.pdf"
+            <button 
+              onClick={handleResumeDownload}
               className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 transition duration-300"
             >
               Resume
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -43,18 +52,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-slate-800 mt-4 rounded-lg p-4">
             <div className="flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('home')} className="text-slate-300 hover:text-blue-400 transition text-left">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-blue-400 transition text-left">About</button>
-              <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-blue-400 transition text-left">Projects</button>
-              <button onClick={() => scrollToSection('achievements')} className="text-slate-300 hover:text-blue-400 transition text-left">Achievements</button>
-              <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-blue-400 transition text-left">Contact</button>
-              <a 
-                href="/assets/Harsh_Thakur_Resume.pdf"
-                download="Harsh_Thakur_Resume.pdf"
-                className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 transition duration-300 text-center"
+              <button onClick={() => scrollToSection('home')} className="text-slate-300 hover:text-blue-400 transition text-left py-2">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-blue-400 transition text-left py-2">About</button>
+              <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-blue-400 transition text-left py-2">Projects</button>
+              <button onClick={() => scrollToSection('achievements')} className="text-slate-300 hover:text-blue-400 transition text-left py-2">Achievements</button>
+              <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-blue-400 transition text-left py-2">Contact</button>
+              <button 
+                onClick={handleResumeDownload}
+                className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 transition duration-300 text-center inline-flex items-center justify-center gap-2"
               >
+                <i className="bi bi-download"></i>
                 Download Resume
-              </a>
+              </button>
             </div>
           </div>
         )}
