@@ -7,7 +7,7 @@ const Home = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const fullText = "Harsh Thakur";
-  const titles = ["Frontend Developer", "Mobile App Developer", "React Specialist"];
+  const titles = ["Frontend Developer", "Mobile App Developer", "Tech Enthusiast"];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
 
   // Typing effect for name

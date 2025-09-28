@@ -38,7 +38,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Harsh Thakur
+            Frontend Developer
           </motion.h1>
           
           {/* Desktop Menu */}

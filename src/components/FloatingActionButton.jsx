@@ -9,17 +9,28 @@ const FloatingActionButton = () => {
   };
 
   const actions = [
-    { icon: 'bi-house', label: 'Home', section: 'home' },
-    { icon: 'bi-github', label: 'GitHub', url: 'https://github.com/yourusername' },
-    { icon: 'bi-linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-    { icon: 'bi-download', label: 'Resume', action: () => {
-      const link = document.createElement('a');
-      link.href = '/Harsh_Thakur_Resume.pdf';
-      link.download = 'Harsh_Thakur_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }},
+    { 
+      icon: 'bi-arrow-up', 
+      label: 'Back to Top', 
+      action: scrollToTop 
+    },
+    { 
+      icon: 'bi-download', 
+      label: 'Download Resume', 
+      action: () => {
+        const link = document.createElement('a');
+        link.href = '/Harsh_Thakur_Resume.pdf';
+        link.download = 'Harsh_Thakur_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    },
+    { 
+      icon: 'bi-envelope', 
+      label: 'Quick Contact', 
+      action: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    },
   ];
 
   return (
@@ -40,13 +51,7 @@ const FloatingActionButton = () => {
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => {
-                  if (action.section) {
-                    document.getElementById(action.section)?.scrollIntoView({ behavior: 'smooth' });
-                  } else if (action.url) {
-                    window.open(action.url, '_blank');
-                  } else if (action.action) {
-                    action.action();
-                  }
+                  action.action();
                   setIsOpen(false);
                 }}
                 className="bg-slate-800 text-white p-3 rounded-full shadow-lg hover:bg-purple-600 transition duration-300 flex items-center gap-2 group"

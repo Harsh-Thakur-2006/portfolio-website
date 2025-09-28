@@ -77,16 +77,13 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="mt-8">
-              <h4 className="text-lg font-semibold mb-4 text-white">Follow Me</h4>
-              <div className="flex gap-4">
+              <h4 className="text-lg font-semibold mb-4 text-white">Connect With Me</h4>
+              <div className="flex gap-4 justify-center">
                 <a href="https://github.com/Harsh-Thakur-2006" className="bg-slate-700 p-3 rounded-full hover:bg-purple-600 transition duration-300">
                   <i className="bi bi-github text-white text-xl"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/harsh-thakur-599630331" className="bg-slate-700 p-3 rounded-full hover:bg-purple-600 transition duration-300">
                   <i className="bi bi-linkedin text-white text-xl"></i>
-                </a>
-                <a href="https://twitter.com/yourusername" className="bg-slate-700 p-3 rounded-full hover:bg-purple-600 transition duration-300">
-                  <i className="bi bi-twitter text-white text-xl"></i>
                 </a>
                 <a href="https://instagram.com/harshthakur7862" className="bg-slate-700 p-3 rounded-full hover:bg-purple-600 transition duration-300">
                   <i className="bi bi-instagram text-white text-xl"></i>

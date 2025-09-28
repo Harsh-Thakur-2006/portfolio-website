@@ -146,17 +146,16 @@ const Projects = () => {
           ))}
         </div>
         
-        {/* GitHub Call-to-Action */}
         <div className="text-center mt-12">
-          <p className="text-slate-400 mb-4">Check out my code and follow my journey</p>
-          <a 
-            href="https://github.com/Harsh-Thakur-2006"
-            className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300"
-          >
-            <i className="bi bi-github"></i>
-            <span>View GitHub Profile</span>
-          </a>
-        </div>
+  <p className="text-slate-400 mb-4">Like what you see? Let's build something together</p>
+  <button 
+    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+    className="inline-flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300"
+  >
+    <i className="bi bi-chat-dots"></i>
+    Start a Conversation
+  </button>
+</div>
       </div>
     </section>
   );

@@ -2,15 +2,6 @@ import React from 'react';
 import profilePic from '../assets/profilePic.jpg';
 
 const About = () => {
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/Harsh_Thakur_Resume.pdf';
-    link.download = 'Harsh_Thakur_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const skills = [
     'HTML/CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git/GitHub', 'Responsive Design', 'React Native'
   ];
@@ -63,21 +54,14 @@ const About = () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={handleResumeDownload}
-                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 inline-flex items-center justify-center gap-2"
-              >
-                <i className="bi bi-download"></i>
-                Download Resume
-              </button>
+            {/* Single Action Button - Focus on contact */}
+            <div className="flex justify-center sm:justify-start">
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300 inline-flex items-center justify-center gap-2"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition duration-300 inline-flex items-center justify-center gap-2"
               >
                 <i className="bi bi-chat-dots"></i>
-                Get In Touch
+                Let's Work Together
               </button>
             </div>
           </div>
